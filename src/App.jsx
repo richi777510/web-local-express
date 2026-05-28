@@ -59,13 +59,13 @@ const packages = [
 const demos = [
   {
     name: 'Demo Barbería',
-    href: '#demo-barberia',
+    href: 'https://demo-barberia-web-local.vercel.app/',
     description:
       'Ejemplo de página para barbería con servicios, ubicación, horarios, galería y botón directo a WhatsApp.',
   },
   {
     name: 'Demo Estética / Uñas',
-    href: '#demo-estetica',
+    href: 'https://demo-estetica-web-local.vercel.app/',
     description:
       'Ejemplo de página para estética, uñas o pestañas, diseñada para mostrar servicios, precios, fotos y contacto rápido.',
   },
