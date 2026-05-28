@@ -58,16 +58,18 @@ const packages = [
 
 const demos = [
   {
-    name: 'Demo Barbería',
+    name: 'Barbería El Patrón',
     href: 'https://demo-barberia-web-local.vercel.app/',
+    image: 'barberia.png',
     description:
-      'Ejemplo de página para barbería con servicios, ubicación, horarios, galería y botón directo a WhatsApp.',
+      'Demo de página web para barbería con servicios, horarios, ubicación y contacto directo por WhatsApp.',
   },
   {
-    name: 'Demo Estética / Uñas',
+    name: 'Bella Studio Nails & Beauty',
     href: 'https://demo-estetica-web-local.vercel.app/',
+    image: 'estetica1.png',
     description:
-      'Ejemplo de página para estética, uñas o pestañas, diseñada para mostrar servicios, precios, fotos y contacto rápido.',
+      'Demo de página web para estética/uñas con servicios, galería, ubicación y botón de reservación por WhatsApp.',
   },
 ]
 
@@ -241,21 +243,28 @@ function App() {
         </div>
         <div className="demo-grid">
           {demos.map((demo) => (
-            <article className="demo-card" key={demo.name}>
-              <div className="demo-preview" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </div>
-              <div>
-                <h3>{demo.name}</h3>
-                <p>{demo.description}</p>
-              </div>
-              <a className="demo-link" href={demo.href}>
-                Ver demo
-              </a>
-            </article>
-          ))}
+  <article className="example-card" key={demo.name}>
+    <img
+      src={demo.image}
+      alt={`Vista previa de ${demo.name}`}
+      className="example-image"
+    />
+
+    <div className="example-content">
+      <h3>{demo.name}</h3>
+      <p>{demo.description}</p>
+
+      <a
+        href={demo.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn"
+      >
+        Ver demo
+      </a>
+    </div>
+  </article>
+))}
         </div>
       </section>
 
